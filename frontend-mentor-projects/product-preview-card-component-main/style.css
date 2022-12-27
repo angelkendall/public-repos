@@ -1,0 +1,219 @@
+:root {
+    --clr-primary-900: hsl(159, 36%, 22%);
+    --clr-primary-400: hsl(158, 36%, 37%);
+    --clr-primary-100: hsl(30, 38%, 92%);
+    --clr-dark: hsl(212, 21%, 14%);
+    --clr-neutral: hsl(228, 12%, 48%);
+    --clr-light: hsl(0, 0%, 100%);
+
+    --fs-base: 0.875rem;
+    --fs-heading: 2rem;
+    --fs-sub-heading: 0.8rem;
+    --ff-body: 'Montserrat', sans-serif;
+    --ff-heading: 'Fraunces', serif;
+
+    --fw-normal: 500;
+    --fw-bold: 700;
+
+    --line-height: 2rem;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+overflow-wrap: break-word;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.6;
+
+    background-color: var(--clr-primary-100);
+    font-family: var(--ff-body);
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-base);
+    color: var(--clr-neutral);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+  
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* hides the mobile-sized image */
+.visible-mobile {
+  display: none !important;
+}
+
+.visible-desktop {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+/* splits the image and text 50% each in the card container */
+.card-image {
+  width: 50%;
+}
+
+.card {
+  background-color: var(--clr-light);
+  border-radius: 1rem;
+  width: 34.375rem; 
+  height: 25.8rem;
+  display: flex;
+}
+
+.product-type {
+  text-transform: uppercase;
+  letter-spacing: 0.20rem;
+  font-size: var(--fs-sub-heading);
+}
+
+.product-name {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-heading);
+  color: var(--clr-dark);
+  line-height: var(--line-height);
+}
+
+.card-main {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+/* splits the image and text 50% each in the card container */
+  width: 50%;
+}
+
+.product-price-current {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-heading);
+  color: var(--clr-primary-400);
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-add-to-cart {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-light);
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
+}
+
+.btn-add-to-cart:hover, .btn-add-to-cart:active {
+  background-color: var(--clr-primary-900);
+}
+
+.attribution { 
+  font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 25.75rem) {
+    /* hides the desktop-sized image */
+  .visible-desktop {
+      display: none !important;
+  }
+
+  /* displays the mobile-sized image */
+  .visible-mobile {
+      display: inline !important;
+
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+  }
+
+  body {
+      justify-content: flex-start;
+  }
+
+  /* resets the 50% split */
+  .card-image, .card-main {
+      width: auto;
+  }
+
+  .card {
+      /* top right bottom left */
+      margin: 1.75rem 1rem 1.75rem 1rem;
+
+      flex-direction: column;
+      align-items: center;
+      
+      width: auto;
+      height: auto;
+  }
+
+  .btn-add-to-cart {
+      width: 18.438rem;
+  }
+}
