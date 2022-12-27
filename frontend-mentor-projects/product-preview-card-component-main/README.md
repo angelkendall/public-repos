@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/product-preview-card-component-sMiPU3Fduy)
 - Live Site URL: [Cloudfare Page Live Site](https://fm-ak-product-preview-card-component.pages.dev/)
 
 ## My process
