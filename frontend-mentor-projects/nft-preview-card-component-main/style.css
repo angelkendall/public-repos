@@ -9,6 +9,8 @@
   /* line */
   --clr-neutral-700: hsl(215, 32%, 27%);
   --fs-base: 1.125rem;
+  --fs-heading: 1.3rem;
+  --fs-smaller: 1rem;
   --ff-base: 'Outfit', sans-serif;
   --fw-light: 300;
   --fw-normal: 400;
@@ -34,6 +36,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  padding: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -56,6 +59,7 @@ body {
   background-color: var(--clr-neutral-900);
   color: var(--clr-primary-300);
   font-family: var(--ff-base);
+  font-size: var(--fs-base);
 
   display: flex;
   flex-direction: column;
@@ -93,12 +97,20 @@ a:hover {
   transition: .4s ease;
 }
 
+h1 {
+  font-size: var(--fs-heading);
+}
+
+.price-information, .line, .creator-information, .card-text {
+ margin-top: 1.25rem;
+}
+
 main {
   background-color: var(--clr-neutral-800);
-  border-radius: 15px;
+  border-radius: 0.83em;
   padding: 1.5rem;
-  max-width: 350px;
-  height: 590px;
+  max-width: 19.5em;
+  height: 32.8em;
 }
 
 .line {
@@ -106,29 +118,34 @@ main {
   opacity: 0.1;
 }
 
-.price-information, .creator-information {
-  display: flex;
+.creator-information {
+  display: flex; 
+  gap: 1rem;
   align-items: center;
+  font-size: var(--fs-smaller);
 }
 
 .creator-information > img {
   width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--clr-light);
+  border-radius: 50%;
 }
 
 .price-information {
+  display: flex;
   justify-content: space-between;
+  font-size: var(--fs-smaller);
+}
+
+.price-information > p > img {
+  height: var(--fs-base);
 }
 
 .price-information > p {
   display: flex;
-  gap: 0.5rem;
-
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .icon-view {
@@ -141,10 +158,11 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .overlay > img {
-  border-radius: 15px;
+  border-radius: 0.5em;
 }
 
 .overlay::before {
@@ -157,7 +175,7 @@ main {
   background: var(--clr-primary-500);
   opacity: 0;
   transition: .4s ease;
-  border-radius: 15px;
+  border-radius: 0.5em;
 }
 
 .overlay:hover::before {
@@ -168,7 +186,6 @@ main {
 .overlay:hover > .icon-view {
   opacity: 1;
   transition: .4s ease;
-
 }
 
 .attribution { 
