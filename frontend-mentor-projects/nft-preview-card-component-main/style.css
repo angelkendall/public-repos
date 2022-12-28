@@ -1,18 +1,18 @@
 :root {
-    --clr-primary-300: hsl(215, 51%, 70%);
-    --clr-primary-500: hsl(178, 100%, 50%);
-    --clr-light: hsl(0, 0%, 100%);
-    /* main bg */
-    --clr-neutral-900: hsl(217, 54%, 11%);
-    /* card bg */
-    --clr-neutral-800: hsl(216, 50%, 16%);
-    /* line */
-    --clr-neutral-700: hsl(215, 32%, 27%);
-    --fs-base: 1.125rem;
-    --ff-base: 'Outfit', sans-serif;
-    --fw-light: 300;
-    --fw-normal: 400;
-    --fw-bold: 600;
+  --clr-primary-300: hsl(215, 51%, 70%);
+  --clr-primary-500: hsl(178, 100%, 50%);
+  --clr-light: hsl(0, 0%, 100%);
+  /* main bg */
+  --clr-neutral-900: hsl(217, 54%, 11%);
+  /* card bg */
+  --clr-neutral-800: hsl(216, 50%, 16%);
+  /* line */
+  --clr-neutral-700: hsl(215, 32%, 27%);
+  --fs-base: 1.125rem;
+  --ff-base: 'Outfit', sans-serif;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 600;
 }
 
 /* Box sizing rules */
@@ -84,38 +84,44 @@ select {
 }
 
 a {
-    color: var(--clr-light);
-    text-decoration: none;
+  color: var(--clr-light);
+  text-decoration: none;
 }
 
 a:hover {
-    color: var(--clr-primary-500);
+  color: var(--clr-primary-500);
+  transition: .4s ease;
 }
 
 main {
-    background-color: var(--clr-neutral-800);
-    border-radius: 15px;
-    padding: 1.5rem;
-    max-width: 350px;
-    height: 590px;
+  background-color: var(--clr-neutral-800);
+  border-radius: 15px;
+  padding: 1.5rem;
+  max-width: 350px;
+  height: 590px;
 }
 
 .line {
-    color: var(--clr-neutral-700);
+  color: var(--clr-neutral-700);
+  opacity: 0.1;
 }
 
 .price-information, .creator-information {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.creator-information > img {
+  width: 2rem;
 }
 
 .price-information {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .price-information > p {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 
 }
 
@@ -150,7 +156,7 @@ main {
   height: 100%;
   background: var(--clr-primary-500);
   opacity: 0;
-  transition: .5s ease;
+  transition: .4s ease;
   border-radius: 15px;
 }
 
@@ -161,28 +167,14 @@ main {
 /* displays the icon only when picture is hovered over */
 .overlay:hover > .icon-view {
   opacity: 1;
+  transition: .4s ease;
+
 }
 
 .attribution { 
-    font-size: 11px; text-align: center; 
+  font-size: 11px; text-align: center; 
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+  color: hsl(228, 45%, 44%); 
 }
