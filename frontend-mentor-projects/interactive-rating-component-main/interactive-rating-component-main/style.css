@@ -114,7 +114,13 @@ select {
 }
 
 .btn-rating:hover {
-  background-color: var(--clr-temp-2);
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+}
+
+.btn-rating:focus {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-light);
 }
 
 .btn-submit {
@@ -128,6 +134,11 @@ select {
   font-weight: var(--fw-bold);
   height: 3.5rem;
   width: 80%;
+}
+
+.btn-submit:hover{
+  background-color: var(--clr-light);
+  color: var(--clr-primary);
 }
 
 .icon-star-background {
