@@ -89,6 +89,11 @@ select {
   /* background: radial-gradient(circle at top, var(--clr-neutral-900),var(--clr-neutral-900-dark)); */
 }
 
+#thankyou-state{
+  position: absolute;
+  display: none;
+}
+
 .rating-btn-list {
     display: flex;
     gap: 1.5rem;

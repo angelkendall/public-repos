@@ -7,10 +7,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Interactive rating component</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
   <main>
   <!-- Rating state start -->
+  <section class="card" id="thankyou-state">
+    <p>You selected <span id="chosen-rating">1</span> out of 5</p>
+  
+    Thank you!
+  
+    <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+      don't hesitate to get in touch!</p>
+    </section>
+
   <section class="card" id="rating-state">
     <img src="images/icon-star.svg" alt="">
     <h1>How did we do?</h1>
@@ -27,19 +37,11 @@
       <li><button class="btn-rating" id="5">5</button></li>
     </ul>
   
-    <button class="btn-submit" id="btn-submit">Submit</button>
+    <button class="btn-submit" id="btn-submit" onclick="changeStates()">Submit</button>
   </section>
   <!-- Rating state end -->
-<br><br><Br>
   <!-- Thank you state start -->
-  <section class="card" id="thankyou-state">
-  <p>You selected <span id="chosen-rating">1</span> out of 5</p>
 
-  Thank you!
-
-  <p>We appreciate you taking the time to give a rating. If you ever need more support, 
-    don't hesitate to get in touch!</p>
-  </section>
   <!-- Thank you state end -->
 
   </main>
