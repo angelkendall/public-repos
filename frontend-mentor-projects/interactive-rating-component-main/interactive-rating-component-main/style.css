@@ -7,7 +7,9 @@
     --clr-neutral-900-dark: hsl(213, 22%, 26%);
 
     --clr-dark: hsl(216, 12%, 8%);
-    --fs-normal: 15px; 
+    --fs-normal: 0.938rem; 
+    --fs-heading: 2rem;
+    --fs-accent: 1.15rem;
     --ff-normal: 'Overpass', sans-serif;
     --fw-normal: 400;
     --fw-bold: 700;
@@ -85,14 +87,17 @@ select {
 .card {
   width: 500px;
   height: 500px;
-  background-color: var(--clr-neutral-900);
+  background-color: var(--clr-temp-3);
   /* background: radial-gradient(circle at top, var(--clr-neutral-900),var(--clr-neutral-900-dark)); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#thankyou-state{
+/* #thankyou-state{
   position: absolute;
   display: none;
-}
+} */
 
 .rating-btn-list {
     display: flex;
@@ -100,8 +105,8 @@ select {
 }
 
 .btn-rating {
-    width: 50px;
-    height: 50px;
+    width: 3.75rem;
+    height: 3.75rem;
     background-color: var(--clr-temp-1);
     color: var(--clr-light);
     border-radius: 50%;
@@ -110,6 +115,34 @@ select {
 
 .btn-rating:hover {
   background-color: var(--clr-temp-2);
+}
+
+.btn-submit {
+  background: var(--clr-primary);
+  border: none;
+  border-radius: 2rem;
+  color: var(--clr-light);
+  font-size: var(--fs-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: var(--fw-bold);
+  height: 3.5rem;
+  width: 80%;
+}
+
+.icon-star-background {
+  background: var(--clr-neutral-100);
+  border-radius: 50%;
+  height: 3.25rem;
+  width: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-star {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .attribution { 
