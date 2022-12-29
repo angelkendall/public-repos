@@ -20,11 +20,11 @@
   
     <!-- list or not? -->
     <ul class="rating-btn-list">
-      <li><button class="btn-rating">1</button></li>
-      <li><button class="btn-rating">2</button></li>
-      <li><button class="btn-rating">3</button></li>
-      <li><button class="btn-rating">4</button></li>
-      <li><button class="btn-rating">5</button></li>
+      <li><button class="btn-rating" id="1">1</button></li>
+      <li><button class="btn-rating" id="2">2</button></li>
+      <li><button class="btn-rating" id="3">3</button></li>
+      <li><button class="btn-rating" id="4">4</button></li>
+      <li><button class="btn-rating" id="5">5</button></li>
     </ul>
   
     <button class="btn-submit" id="btn-submit">Submit</button>
@@ -33,7 +33,7 @@
 <br><br><Br>
   <!-- Thank you state start -->
   <section class="card" id="thankyou-state">
-  You selected <!-- Add rating here --> out of 5
+  <p>You selected <span id="chosen-rating">1</span> out of 5</p>
 
   Thank you!
 
@@ -47,7 +47,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/angelkendall">AK</a>.
   </footer>
+  <script type="text/javascript" src="script.js"></script>
 
-  <script src="script.js"></script>
 </body>
 </html>
