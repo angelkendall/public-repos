@@ -4,10 +4,9 @@
     --clr-neutral-100: hsl(217, 12%, 63%);
     --clr-neutral-400: hsl(216, 12%, 54%);
     --clr-neutral-900: hsl(214, 14%, 19%);
-    --clr-neutral-900-dark: hsl(213, 22%, 26%);
-
+    --clr-background: linear-gradient(to bottom,hsl(212, 18%, 14%), hsl(220, 16%, 11%));
     --clr-dark: hsl(216, 12%, 8%);
-    /* --fs-normal: .rem;  */
+    /* --fs-normal: 1rem;  */
     --fs-normal: 0.938rem; 
     --fs-heading: 2rem;
     --fs-accent: 1.15rem;
@@ -19,6 +18,7 @@
     --clr-temp-2: rgb(45, 45, 163);
     --clr-temp-3: rgb(141, 57, 141); 
 }
+
 
 /* Box sizing rules */
 *,
@@ -37,8 +37,11 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul,
+li {
   margin: 0;
+  padding: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -63,6 +66,11 @@ body {
   font-family: var(--ff-normal);
 
   color: var(--clr-light);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* A elements that don't have a class get default styles */
@@ -88,41 +96,45 @@ select {
 .card {
   max-width: 32rem;
   height: 32.5rem;
-
-  /* width: clamp(100%/(N + 1) + 0.1%, 100px, 32rem);*/
-
-  /* width: clamp(10rem, 32rem, 32rem); */
-  background-color: var(--clr-temp-3);
-  /* background: radial-gradient(circle at top, var(--clr-neutral-900),var(--clr-neutral-900-dark)); */
+  background: var(--clr-background);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 1rem;
-  /* padding: 2rem; */
+  justify-content: space-between;
+  border-radius: 0.625rem;
+  padding: 2rem;
 }
 
-/* #thankyou-state{
-  position: absolute;
+#thankyou-state{
+  /* position: absolute; */
   display: none;
-} */
+}
 
 /* #rating-state {
   display: none;
 } */
 
 .rating-btn-list {
+    width: 100%;
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid black;
 }
 
 .btn-rating {
-    width: 3.75em;
-    height: 3.75em;
+    width: 3em;
+    aspect-ratio: 1/1;
+    /* padding: rem; */
     background-color: var(--clr-temp-1);
     color: var(--clr-light);
     border-radius: 50%;
     border: none;
 }
+
+/* .rating-btn-list > li {
+  padding: 0.5rem;
+} */
 
 .btn-rating:hover {
   background-color: var(--clr-primary);
@@ -144,7 +156,7 @@ select {
   letter-spacing: 0.2rem;
   font-weight: var(--fw-bold);
   height: 3.5rem;
-  width: 20rem;
+  width: 100%;
 }
 
 .btn-submit:hover{
@@ -155,8 +167,8 @@ select {
 .icon-star-background {
   background: var(--clr-neutral-100);
   border-radius: 50%;
-  height: 3.25rem;
-  width: 3.25rem;
+  height: 3rem;
+  width: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,17 +202,19 @@ select {
   }
 }
 
-/* @media (max-width: 640px) {
+@media (max-width: 640px) {
   .card {
-    width: 25.5rem;
-    height: 28.1rem;
+    width: 23rem;
+    height: 23.5rem;
   }
-}
-*/
 
-@media (max-width: 400px) {
+  .btn-submit {
+    height: 2.5rem;
+  }
+} 
+
+@media (max-width: 380px) {
   .card {
-    /* width: 20.5rem; */
-    height: 20.1rem;
+    width: 20rem;
   }
 } 
