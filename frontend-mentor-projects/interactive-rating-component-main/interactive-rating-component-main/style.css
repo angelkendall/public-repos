@@ -114,22 +114,20 @@ select {
 } */
 
 .rating-btn-list {
-    width: 100%;
+    border: 3px solid rgb(137, 218, 129);
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    border: 3px solid black;
 }
 
+
 .btn-rating {
-    width: 3em;
     aspect-ratio: 1/1;
-    /* padding: rem; */
     background-color: var(--clr-temp-1);
     color: var(--clr-light);
     border-radius: 50%;
     border: none;
+
+    height: 4rem;
 }
 
 /* .rating-btn-list > li {
@@ -211,10 +209,19 @@ select {
   .btn-submit {
     height: 2.5rem;
   }
+
+  .btn-rating {
+    height: 3rem;
+  }
 } 
 
 @media (max-width: 380px) {
   .card {
     width: 20rem;
   }
+
+  .btn-rating {
+    height: 2.5rem;
+  }
+
 } 
