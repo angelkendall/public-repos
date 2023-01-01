@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Rating state screenshot](./screenshot-ratingstate.jpg)
-![Thank-you state screenshot](./screenshot-thankyoustate.jpg)
+![Rating state screenshot](./screenshot-ratingstate.png)
+![Thank-you state screenshot](./screenshot-thankyoustate.png)
 
 ### Links
 
