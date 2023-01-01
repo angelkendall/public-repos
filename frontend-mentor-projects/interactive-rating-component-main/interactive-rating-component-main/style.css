@@ -4,7 +4,6 @@
     --clr-neutral-100: hsl(217, 12%, 63%);
     --clr-neutral-400: hsl(216, 12%, 54%);
     --clr-neutral-900: hsl(214, 14%, 19%);
-    /* --clr-background: linear-gradient(to bottom,hsl(212, 18%, 14%), hsl(220, 16%, 11%)); */
     --clr-background: radial-gradient(farthest-side at top center, hsl(215deg, 17%, 15%), hsl(215deg, 27%, 12%));
     --clr-dark: hsl(216, 12%, 8%);
     --fs-normal: 0.938rem; 
@@ -113,9 +112,7 @@ h1 {
 }
 
 #thankyou-state{
-  /* position: absolute; */
   display: none;
-
   text-align: center;
 }
 
@@ -145,11 +142,6 @@ h1 {
 .thankyou-state-header > img {
   margin: 1rem;
 }
-
-
-/* #rating-state {
-  display: none;
-} */
 
 .rating-btn-list {
     display: flex;
@@ -235,16 +227,6 @@ h1 {
     scroll-behavior: auto !important;
   }
 }
-/* 
-@media (min-width: 576px) {
-  main {
-    border-radius: 2rem;
-    max-width: 25.89rem;
-    min-height: 25.948rem;
-    padding: 1.75rem;
-
-  }
-} */
 
 @media (max-width: 680px) {
   :root {
