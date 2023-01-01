@@ -10,44 +10,46 @@
 
 </head>
 <body>
+  
   <main>
-  <section class="card" id="thankyou-state">
-    <img src="images/illustration-thank-you.svg">
-    <p>You selected <span id="chosen-rating">1</span> out of 5</p>
-  
-    <h1>Thank you!</h1>
-  
-    <p>We appreciate you taking the time to give a rating. If you ever need more support, 
-      don't hesitate to get in touch!</p>
-  </section>
+    <section class="card" id="thankyou-state">
+      <div class="thankyou-state-header">
+        <img src="images/illustration-thank-you.svg">
+        <p class="rating-selected">You selected <span id="chosen-rating">1</span> out of 5</p>  
+      </div>
+      <div class="text-container">
+        <h1>Thank you!</h1>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+          don't hesitate to get in touch!</p>
+      </div>
+    </section>
 
-  <section class="card" id="rating-state">
-    <div class="icon-star-background">
-      <img src="images/icon-star.svg" alt="" class="icon-star">
-    </div>
-    <h1>How did we do?</h1>
-
-
-    <p>Please let us know how we did with your support request. All feedback is appreciated 
-      to help us improve our offering!</p>
-  
-    <!-- list or not? -->
-    <ul class="rating-btn-list">
-      <li><button class="btn-rating" id="1">1</button></li>
-      <li><button class="btn-rating" id="2">2</button></li>
-      <li><button class="btn-rating" id="3">3</button></li>
-      <li><button class="btn-rating" id="4">4</button></li>
-      <li><button class="btn-rating" id="5">5</button></li>
-    </ul>
-  
-    <!-- <button class="btn-submit" onclick="changeStates()">Submit</button> -->
-  </section>
-
+    <section class="card" id="rating-state">
+      <div class="icon-star-background">
+        <img src="images/icon-star.svg" alt="" class="icon-star">
+      </div>
+      <div class="text-container">
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!</p>       
+      </div>
+      <!-- list or form? -->
+      <ul class="rating-btn-list">
+        <li><button class="btn-rating" id="1">1</button></li>
+        <li><button class="btn-rating" id="2">2</button></li>
+        <li><button class="btn-rating" id="3">3</button></li>
+        <li><button class="btn-rating" id="4">4</button></li>
+        <li><button class="btn-rating" id="5">5</button></li>
+      </ul>
+      <button class="btn-submit" onclick="changeStates()">Submit</button>
+    </section>
   </main>
-  <!-- <footer class="attribution">
+
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/angelkendall">AK</a>.
-  </footer> -->
+  </footer>
+
   <script type="text/javascript" src="script.js"></script>
 
 </body>

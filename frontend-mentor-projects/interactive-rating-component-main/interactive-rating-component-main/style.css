@@ -4,19 +4,16 @@
     --clr-neutral-100: hsl(217, 12%, 63%);
     --clr-neutral-400: hsl(216, 12%, 54%);
     --clr-neutral-900: hsl(214, 14%, 19%);
-    --clr-background: linear-gradient(to bottom,hsl(212, 18%, 14%), hsl(220, 16%, 11%));
+    /* --clr-background: linear-gradient(to bottom,hsl(212, 18%, 14%), hsl(220, 16%, 11%)); */
+    --clr-background: radial-gradient(farthest-side at top center, hsl(215deg, 17%, 15%), hsl(215deg, 27%, 12%));
     --clr-dark: hsl(216, 12%, 8%);
-    /* --fs-normal: 1rem;  */
     --fs-normal: 0.938rem; 
-    --fs-heading: 2rem;
-    --fs-accent: 1.15rem;
+    --fs-heading: 1.75rem;
+    --fs-accent: 1rem;
     --ff-normal: 'Overpass', sans-serif;
+    --line-height-text: 1.5; 
     --fw-normal: 400;
     --fw-bold: 700;
-
-    --clr-temp-1: rgb(206, 60, 60);
-    --clr-temp-2: rgb(45, 45, 163);
-    --clr-temp-3: rgb(141, 57, 141); 
 }
 
 
@@ -65,7 +62,7 @@ body {
   background-color: var(--clr-dark);
   font-family: var(--ff-normal);
 
-  color: var(--clr-light);
+  color: var(--clr-neutral-100);
 
   display: flex;
   flex-direction: column;
@@ -93,46 +90,83 @@ select {
   font: inherit;
 }
 
+main {
+  max-width: 26.25rem;
+  min-height: 26.25rem;
+}
+
+h1 {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-bold);
+  color: var(--clr-light);
+}
+
 .card {
-  max-width: 32rem;
-  height: 32.5rem;
+  width: 100%;
   background: var(--clr-background);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border-radius: 0.625rem;
+  border-radius: 2rem;
   padding: 2rem;
+  gap: 1rem;
+  line-height: var(--line-height-text);
 }
 
 #thankyou-state{
   /* position: absolute; */
   display: none;
+
+  text-align: center;
 }
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 1em;
+}
+
+.rating-selected {
+  color: var(--clr-primary);
+  background: var(--clr-neutral-900);
+  font-size: var(--fs-accent);
+  text-align: center;
+  border-radius: 2rem;
+  padding: 0.25em 1em;
+  margin-top: 1em;
+}
+.thankyou-state-header {
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thankyou-state-header > img {
+  margin: 1rem;
+}
+
 
 /* #rating-state {
   display: none;
 } */
 
 .rating-btn-list {
-    border: 3px solid rgb(137, 218, 129);
     display: flex;
     justify-content: space-between;
+    margin: 0.75rem;
 }
 
 
 .btn-rating {
-    aspect-ratio: 1/1;
-    background-color: var(--clr-temp-1);
-    color: var(--clr-light);
+    background: var(--clr-neutral-900);
+    color: var(--clr-neutral-400);
     border-radius: 50%;
     border: none;
-
-    height: 4rem;
+    width: 3.25em;
+    height: 3.25em;
+    font-size: var(--fs-accent);
 }
-
-/* .rating-btn-list > li {
-  padding: 0.5rem;
-} */
 
 .btn-rating:hover {
   background-color: var(--clr-primary);
@@ -151,9 +185,9 @@ select {
   color: var(--clr-light);
   font-size: var(--fs-accent);
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.2em;
   font-weight: var(--fw-bold);
-  height: 3.5rem;
+  height: 2.8em;
   width: 100%;
 }
 
@@ -163,18 +197,20 @@ select {
 }
 
 .icon-star-background {
-  background: var(--clr-neutral-100);
-  border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
+  background: var(--clr-neutral-900);
+  font-size: var(--fs-accent);
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 3em;
 }
 
 .icon-star {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1em;
+  height: 1em;
 }
 
 .attribution { 
@@ -199,29 +235,26 @@ select {
     scroll-behavior: auto !important;
   }
 }
+/* 
+@media (min-width: 576px) {
+  main {
+    border-radius: 2rem;
+    max-width: 25.89rem;
+    min-height: 25.948rem;
+    padding: 1.75rem;
 
-@media (max-width: 640px) {
-  .card {
-    width: 23rem;
-    height: 23.5rem;
+  }
+} */
+
+@media (max-width: 680px) {
+  :root {
+    --fs-heading: 1.5rem;
+    --fs-accent: 0.828rem;
   }
 
-  .btn-submit {
-    height: 2.5rem;
+  main {
+    border-radius: 2rem;
+    max-width: 25rem;
+    padding: 1.5rem;
   }
-
-  .btn-rating {
-    height: 3rem;
-  }
-} 
-
-@media (max-width: 380px) {
-  .card {
-    width: 20rem;
-  }
-
-  .btn-rating {
-    height: 2.5rem;
-  }
-
-} 
+}
